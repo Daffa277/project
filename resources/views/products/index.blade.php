@@ -7,10 +7,10 @@
 <body>
     <h1>Daftar Produk</h1>
     <ul>
-        @foreach($products as $id => $products)
+        @foreach($products as $id => $product)
         <li>
             <a href="{{ url('/product/' . $id) }}">
-                {{ $products['name'] }} - Rp{{ number_format($product['price'], 0, ',', '.')}}
+                {{ $product['name'] }} - Rp{{ number_format($product['price'], 0, ',', '.')}}
             </a>
         </li>
         @endforeach
